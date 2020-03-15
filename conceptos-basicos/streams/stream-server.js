@@ -1,3 +1,4 @@
+// LOS STREAMS BÁSICAMENTE SIRVEN PARA MANEJAR GRANDES CANTIDADES DE DATOS
 // este archivo leería utilizando streams, es decir por pedazos y de esta manera no acapararía toda la memoria del servidor
 const fs = require("fs");
 
