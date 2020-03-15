@@ -1,3 +1,4 @@
+// crea un archivo que pesa mucho llamado big
 const fs = require("fs");
 const file = fs.createWriteStream("./big");
 

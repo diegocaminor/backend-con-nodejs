@@ -1,3 +1,4 @@
+// este archivo leería utilizando streams, es decir por pedazos y de esta manera no acapararía toda la memoria del servidor
 const fs = require("fs");
 
 const server = require("http").createServer();

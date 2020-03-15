@@ -1,3 +1,4 @@
+// este archivo leería el archivo ocupando toda la memoria en el servidor y no sería optimo
 const fs = require("fs");
 
 const server = require("http").createServer();
