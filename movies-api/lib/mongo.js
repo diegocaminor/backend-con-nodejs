@@ -41,7 +41,7 @@ class MongoLib {
 
   get(collection, id) {
     return this.connect().then(db => {
-      return db.collection(collection).findOne({ _id: ObjectId(id) });
+      return db.collection(collection).findOne({ _id: new ObjectId(id) });
     });
   }
 
