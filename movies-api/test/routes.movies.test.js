@@ -1,4 +1,4 @@
-const assert = require('assert'); // se encarga de verificar si es verdad o no nuestra comparación en los test
+const assert = require('assert'); // assert es una librería nativa de nodejs // se encarga de verificar si es verdad o no nuestra comparación en los test
 const proxyquire = require('proxyquire');
 
 const { moviesMock, MoviesServiceMock } = require('../utils/mocks/movies.js');
@@ -6,7 +6,7 @@ const testServer = require('../utils/testServer');
 
 describe('routes - movies', function() {
   const route = proxyquire('../routes/movies', {
-    '../services/movies': MoviesServiceMock
+    '../services/movies': MoviesServiceMock // ../services/movies será reemplazado por MoviesServiceMock
   });
 
   const request = testServer(route);
