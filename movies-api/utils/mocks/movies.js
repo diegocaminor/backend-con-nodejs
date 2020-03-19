@@ -153,6 +153,25 @@ const moviesMock = [
     }
   ];
   
+  // esta utilidad me permite crear las películas filtradas
+  function filteredMoviesMock(tag) {
+    return moviesMock.filter(movie => movie.tags.includes(tag));
+  }
+
+  // debido a que solo queremos hacer test de las rutas, no llegaremos a los servicios
+  // por ello se crea un mock de servicios
+  class MoviesServiceMock {
+    async getMovies() {
+      return Promise.resolve(moviesMock);
+    }
+    
+    async creatMovie() {
+      return Promise.resolve(moviesMock[0]);
+    }
+  }
+
   module.exports = {
-    moviesMock
+    moviesMock,
+    filteredMoviesMock,
+    MoviesServiceMock,
   };
